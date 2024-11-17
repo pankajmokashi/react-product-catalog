@@ -8,7 +8,7 @@ import CategoryFilter from "../Components/CategoryFilter";
 import FilterSlider from "../Components/FilterSlider";
 
 function Products() {
-  const { searchValue, sortByPrice, selectedCategories } =
+  const { searchValue, sortByPrice, selectedCategories, clearFilters } =
     useContext(AppContext);
   let filteredData = products;
 
@@ -59,6 +59,11 @@ function Products() {
               <CategoryFilter />
               <div className="border-t"></div>
               <PriceSort />
+              <div className="text-gray-600 p-4 lg:border-0">
+                <span onClick={clearFilters} className="cursor-pointer">
+                  clear
+                </span>
+              </div>
             </div>
 
             {/* Product grid */}
