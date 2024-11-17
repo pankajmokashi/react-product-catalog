@@ -1,8 +1,19 @@
+import { useContext } from "react";
 import ProductList from "../Components/ProductList";
+import Searchbar from "../Components/Searchbar";
 import products from "../assets/products.json";
+import { AppContext } from "../context/ProductsContext";
 
 function Products() {
+  const { searchValue } = useContext(AppContext);
   let filteredData = products;
+
+  // Apply search filter
+  filteredData = products.filter(
+    (item) =>
+      item.name.toLowerCase().includes(searchValue.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchValue.toLowerCase())
+  );
 
   return (
     <div className="bg-white">
@@ -11,7 +22,11 @@ function Products() {
           <h1 className="text-3xl font-bold tracking-tight text-gray-900">
             Products
           </h1>
-          <div className="flex items-center"></div>
+          <div className="flex items-center">
+            <div className="hidden lg:flex min-w-72 gap-2 justify-between">
+              <Searchbar />
+            </div>
+          </div>
         </div>
 
         <section aria-labelledby="products-heading" className="pb-24 pt-4">
