@@ -5,6 +5,7 @@ import products from "../assets/products.json";
 import { AppContext } from "../context/ProductsContext";
 import PriceSort from "../Components/PriceSort";
 import CategoryFilter from "../Components/CategoryFilter";
+import FilterSlider from "../Components/FilterSlider";
 
 function Products() {
   const { searchValue, sortByPrice, selectedCategories } =
@@ -43,6 +44,7 @@ function Products() {
             <div className="hidden lg:flex min-w-72 gap-2 justify-between">
               <Searchbar />
             </div>
+            <FilterSlider />
           </div>
         </div>
 
