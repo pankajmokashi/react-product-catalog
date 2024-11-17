@@ -4,9 +4,11 @@ import Searchbar from "../Components/Searchbar";
 import products from "../assets/products.json";
 import { AppContext } from "../context/ProductsContext";
 import PriceSort from "../Components/PriceSort";
+import CategoryFilter from "../Components/CategoryFilter";
 
 function Products() {
-  const { searchValue, sortByPrice } = useContext(AppContext);
+  const { searchValue, sortByPrice, selectedCategories } =
+    useContext(AppContext);
   let filteredData = products;
 
   // Apply search filter
@@ -20,6 +22,13 @@ function Products() {
   if (sortByPrice) {
     filteredData = filteredData.sort((a, b) =>
       sortByPrice === "Low To high" ? a.price - b.price : b.price - a.price
+    );
+  }
+
+  // Apply category filter
+  if (selectedCategories.length > 0) {
+    filteredData = filteredData.filter((item) =>
+      selectedCategories.includes(item.category.toLowerCase())
     );
   }
 
@@ -45,7 +54,9 @@ function Products() {
           <div className="grid grid-cols-1 gap-x-4 gap-y-10 lg:grid-cols-4">
             {/* Filters */}
             <div className="hidden lg:block">
-            <PriceSort />
+              <CategoryFilter />
+              <div className="border-t"></div>
+              <PriceSort />
             </div>
 
             {/* Product grid */}
