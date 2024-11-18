@@ -1,9 +1,12 @@
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 
 function ProductList({ products }) {
+  const navigate = useNavigate();
+
   return (
     <div className="mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="mt-2 sm:mt-6 grid grid-cols-1 gap-x-6 gap-y-16 xm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 xl:gap-x-8">
+      <div className="mt-2 sm:mt-6 grid grid-cols-1 gap-x-6 gap-y-12 xm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 xl:gap-x-8">
         {products.map((product) => (
           <div key={product.id} className="group relative">
             <img
@@ -15,9 +18,14 @@ function ProductList({ products }) {
               <h3 className="text-gray-700">{product.name}</h3>
               <p className="font-medium text-gray-900">$ {product.price}</p>
             </div>
-            <button className="mt-2 w-full py-2 text-sm bg-black text-white rounded-lg hover:scale-95">
-              View Details
-            </button>
+            <div className="mt-3">
+              <button
+                onClick={() => navigate(`/product/${product.id}`)}
+                className="w-full py-2 text-sm bg-black text-white rounded-lg hover:opacity-75"
+              >
+                View Details
+              </button>
+            </div>
           </div>
         ))}
       </div>
