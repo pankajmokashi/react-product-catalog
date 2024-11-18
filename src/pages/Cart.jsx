@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AppContext } from "../context/ProductsContext";
+import CartList from "../Components/CartList";
 
 function Cart() {
   const { cartData } = useContext(AppContext);
@@ -42,7 +43,7 @@ function Cart() {
         <div className="w-full sm:px-8 py-8 sm:py-16">
           {cartData.length > 0 ? (
             <div className="mx-auto max-w-lg">
-              {/* <CartList /> */}
+              <CartList />
               <div className="flex justify-center pt-4 sm:pt-8">
                 <button className="w-full max-w-md text-center bg-blue-500 text-white font-semibold py-2 rounded-lg hover:scale-95">
                   Checkout
