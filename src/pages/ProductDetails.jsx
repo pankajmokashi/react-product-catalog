@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
+import Product from "../Components/Product";
 
 function ProductDetails({ products }) {
   const { id } = useParams();
@@ -34,6 +35,13 @@ function ProductDetails({ products }) {
             </Link>
           </button>
         </div>
+        {product ? (
+          <div className="min-h-[400px]">
+            <Product product={product} />
+          </div>
+        ) : (
+          <h2 className="text-center mt-20 text-lg">Product not found</h2>
+        )}
       </main>
     </div>
   );
