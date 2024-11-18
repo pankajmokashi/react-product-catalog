@@ -1,9 +1,11 @@
-import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import Product from "../Components/Product";
+import { useContext } from "react";
+import { AppContext } from "../context/ProductsContext";
 
-function ProductDetails({ products }) {
+function ProductDetails() {
   const { id } = useParams();
+  const { products } = useContext(AppContext);
   const product = products.find((p) => p.id === parseInt(id));
 
   return (
@@ -46,9 +48,5 @@ function ProductDetails({ products }) {
     </div>
   );
 }
-
-ProductDetails.propTypes = {
-  products: PropTypes.array.isRequired,
-};
 
 export default ProductDetails;

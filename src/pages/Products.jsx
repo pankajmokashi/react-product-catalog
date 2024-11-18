@@ -1,22 +1,24 @@
 import { useContext } from "react";
 import ProductList from "../Components/ProductList";
 import Searchbar from "../Components/Searchbar";
-import products from "../assets/products.json";
 import { AppContext } from "../context/ProductsContext";
 import PriceSort from "../Components/PriceSort";
 import CategoryFilter from "../Components/CategoryFilter";
 import FilterSlider from "../Components/FilterSlider";
 
 function Products() {
-  const { searchValue, sortByPrice, selectedCategories, clearFilters } =
-    useContext(AppContext);
+  const {
+    products,
+    searchValue,
+    sortByPrice,
+    selectedCategories,
+    clearFilters,
+  } = useContext(AppContext);
   let filteredData = products;
 
   // Apply search filter
-  filteredData = products.filter(
-    (item) =>
-      item.name.toLowerCase().includes(searchValue.toLowerCase()) ||
-      item.description.toLowerCase().includes(searchValue.toLowerCase())
+  filteredData = products.filter((item) =>
+    item.name.toLowerCase().includes(searchValue.toLowerCase())
   );
 
   // Apply sorting (if any)
