@@ -2,6 +2,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./Components/Header";
 import { AppProvider } from "./context/ProductsContext";
 import Products from "./pages/Products";
+import ProductDetails from "./pages/ProductDetails";
+import products from "./assets/products.json";
 
 export default function App() {
   return (
@@ -18,9 +20,13 @@ export default function App() {
             path="/"
             element={
               <AppProvider>
-                <Products />
+                <Products products={products} />
               </AppProvider>
             }
+          />
+          <Route
+            path="/product/:id"
+            element={<ProductDetails products={products} />}
           />
         </Routes>
       </BrowserRouter>
