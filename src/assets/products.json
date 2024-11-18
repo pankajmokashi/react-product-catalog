@@ -4,7 +4,7 @@
     "name": "Wireless Headphones",
     "category": "Electronics",
     "price": 99.99,
-    "image": "images/headphones.jpg",
+    "image": "/images/headphones.jpg",
     "description": "High-quality wireless headphones with noise cancellation."
   },
   {
@@ -12,7 +12,7 @@
     "name": "Smart Watch",
     "category": "Electronics",
     "price": 199.99,
-    "image": "images/smartwatch.jpg",
+    "image": "/images/smartwatch.jpg",
     "description": "Stay connected on the go with this stylish smart watch."
   },
   {
@@ -20,7 +20,7 @@
     "name": "Bluetooth Speaker",
     "category": "Electronics",
     "price": 49.99,
-    "image": "images/speaker.jpg",
+    "image": "/images/speaker.jpg",
     "description": "Portable Bluetooth speaker with powerful sound and long battery life."
   },
   {
@@ -28,7 +28,7 @@
     "name": "Gaming Mouse",
     "category": "Electronics",
     "price": 59.99,
-    "image": "images/mouse.jpg",
+    "image": "/images/mouse.jpg",
     "description": "Ergonomic gaming mouse with customizable buttons and RGB lighting."
   },
   {
@@ -36,7 +36,7 @@
     "name": "4K Action Camera",
     "category": "Electronics",
     "price": 299.99,
-    "image": "images/actioncamera.jpg",
+    "image": "/images/actioncamera.jpg",
     "description": "Capture every moment in stunning 4K resolution with this action camera."
   },
   {
@@ -44,7 +44,7 @@
     "name": "Diamond Necklace",
     "category": "Jewellery",
     "price": 499.99,
-    "image": "images/necklace.jpg",
+    "image": "/images/necklace.jpg",
     "description": "Elegant diamond necklace to elevate your style."
   },
   {
@@ -52,7 +52,7 @@
     "name": "Gold Earrings",
     "category": "Jewellery",
     "price": 249.99,
-    "image": "images/earrings.jpg",
+    "image": "/images/earrings.jpg",
     "description": "Timeless gold earrings perfect for any occasion."
   },
   {
@@ -60,7 +60,7 @@
     "name": "Silver Bracelet",
     "category": "Jewellery",
     "price": 99.99,
-    "image": "images/bracelet.jpg",
+    "image": "/images/bracelet.jpg",
     "description": "Chic silver bracelet for a sophisticated look."
   },
   {
@@ -68,7 +68,7 @@
     "name": "Pearl Ring",
     "category": "Jewellery",
     "price": 199.99,
-    "image": "images/ring.jpg",
+    "image": "/images/ring.jpg",
     "description": "Classic pearl ring that complements your elegance."
   },
   {
@@ -76,7 +76,7 @@
     "name": "Gemstone Pendant",
     "category": "Jewellery",
     "price": 179.99,
-    "image": "images/pendant.jpg",
+    "image": "/images/pendant.jpg",
     "description": "Stylish gemstone pendant with intricate design."
   },
   {
@@ -84,7 +84,7 @@
     "name": "Leather Jacket",
     "category": "Men's Clothing",
     "price": 149.99,
-    "image": "images/jacket.jpg",
+    "image": "/images/jacket.jpg",
     "description": "Classic leather jacket for a bold statement."
   },
   {
@@ -92,7 +92,7 @@
     "name": "Formal Shirt",
     "category": "Men's Clothing",
     "price": 49.99,
-    "image": "images/shirt.jpg",
+    "image": "/images/shirt.jpg",
     "description": "Premium formal shirt for office and special events."
   },
   {
@@ -100,7 +100,7 @@
     "name": "Jeans",
     "category": "Men's Clothing",
     "price": 59.99,
-    "image": "images/jeans.jpg",
+    "image": "/images/jeans.jpg",
     "description": "Stylish and comfortable jeans for everyday wear."
   },
   {
@@ -108,7 +108,7 @@
     "name": "Sweatshirt",
     "category": "Men's Clothing",
     "price": 39.99,
-    "image": "images/sweatshirt.jpg",
+    "image": "/images/sweatshirt.jpg",
     "description": "Cozy sweatshirt to keep you warm in style."
   },
   {
@@ -116,7 +116,7 @@
     "name": "Chinos",
     "category": "Men's Clothing",
     "price": 44.99,
-    "image": "images/chinos.jpg",
+    "image": "/images/chinos.jpg",
     "description": "Versatile chinos for casual and formal occasions."
   },
   {
@@ -124,7 +124,7 @@
     "name": "Evening Gown",
     "category": "Women's Clothing",
     "price": 129.99,
-    "image": "images/gown.jpg",
+    "image": "/images/gown.jpg",
     "description": "Stunning evening gown for special occasions."
   },
   {
@@ -132,7 +132,7 @@
     "name": "Blouse",
     "category": "Women's Clothing",
     "price": 34.99,
-    "image": "images/blouse.jpg",
+    "image": "/images/blouse.jpg",
     "description": "Elegant blouse for a chic look."
   },
   {
@@ -140,7 +140,7 @@
     "name": "Denim Skirt",
     "category": "Women's Clothing",
     "price": 49.99,
-    "image": "images/skirt.jpg",
+    "image": "/images/skirt.jpg",
     "description": "Trendy denim skirt perfect for casual outings."
   },
   {
@@ -148,7 +148,7 @@
     "name": "Wool Coat",
     "category": "Women's Clothing",
     "price": 179.99,
-    "image": "images/coat.jpg",
+    "image": "/images/coat.jpg",
     "description": "Warm and stylish wool coat for winter days."
   },
   {
@@ -156,7 +156,7 @@
     "name": "Floral Dress",
     "category": "Women's Clothing",
     "price": 59.99,
-    "image": "images/dress.jpg",
+    "image": "/images/dress.jpg",
     "description": "Beautiful floral dress for sunny days."
   }
 ]
