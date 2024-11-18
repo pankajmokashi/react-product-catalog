@@ -74,7 +74,7 @@ function CategoryFilter() {
               />
               <label
                 htmlFor={category}
-                className="ml-3 min-w-0 text-sm flex-1 text-gray-500"
+                className="ml-3 min-w-0 text-sm flex-1 text-gray-500 capitalize"
               >
                 {category}
               </label>
