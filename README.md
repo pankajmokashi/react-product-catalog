@@ -1,6 +1,6 @@
 # React Product Catalog
 
-A **React Product Catalog** application built with **React (Vite)** and **Tailwind CSS**. This project demonstrates how to create a modern, responsive product catalog with features such as product listing, filtering, sorting, and detailed views using reusable components and React Router.
+A **React Product Catalog** application built with **React (Vite)** and **Tailwind CSS**. This is a modern, responsive product catalog project with features such as product listing, filtering, sorting, and detailed views using reusable components and React Router.
 
 ---
 
