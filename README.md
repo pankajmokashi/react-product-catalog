@@ -4,6 +4,10 @@ A **React Product Catalog** application built with **React (Vite)** and **Tailwi
 
 ---
 
+## 🔗 Live Demo
+
+Check out the live version of the application here: [React Product Catalog Live](https://react-product-catalog-one.vercel.app/)
+
 ## 📚 Libraries and Tools Used:
 - **React (Vite**) - Fast React development environment.
 - **Tailwind CSS** - For styling the application.
@@ -46,10 +50,10 @@ Ensure you have the following installed:
 
    Navigate to http://localhost:5173.
 
+
 ## 🛠 Application Features
 
-1. **Product Listing**
-  Display all products in a grid or list layout with the following details:
+1. **Product Listing:** Display all products in a grid or list layout with the following details:
 - Product image
 - Product name
 - Product price
@@ -82,6 +86,7 @@ Ensure you have the following installed:
 
 3. **Dynamic Product Data**
 - Integrated with a mock API [Mocky](https://run.mocky.io/v3/ed766f71-aa0f-4551-a3ac-500672c1cbab) to fetch product data, replacing static JSON files.
+
 
 ## 📸 Screenshots
 
