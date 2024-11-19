@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
-import { createContext, useState } from "react";
-import products from "../assets/products.json";
+import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 // Create the context
@@ -8,12 +7,32 @@ const AppContext = createContext();
 
 // Create the provider component
 const AppProvider = ({ children }) => {
+  const [products, setProducts] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [sortByPrice, setSortByPrice] = useState("");
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [cartData, setCartData] = useState([]);
   const navigate = useNavigate();
 
+  // fetch products from https://designer.mocky.io/design
+  useEffect(() => {
+    const url = `https://run.mocky.io/v3/ed766f71-aa0f-4551-a3ac-500672c1cbab`;
+    fetch(url)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setProducts(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error.message);
+      });
+  }, []);
+
+  // clear filter states
   function clearFilters() {
     setSearchValue("");
     setSortByPrice("");
