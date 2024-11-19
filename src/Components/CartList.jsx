@@ -36,6 +36,7 @@ function CartList() {
             <div className="col-span-2 xm:p-4 xm:border xm:border-slate-300 rounded-lg">
               <Link to={`/product/${product.id}`}>
                 <img
+                  loading="lazy"
                   src={product.image}
                   alt={product.name}
                   className="aspect-square w-full rounded-lg hover:scale-105"

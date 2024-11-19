@@ -10,6 +10,7 @@ function Product({ product }) {
       <div className="mx-auto w-full xm:max-w-md md:max-w-full p-4 sm:p-8 lg:px-16 flex flex-col justify-center md:flex-row gap-8">
         <div className="h-full">
           <img
+            loading="lazy"
             alt={product.name}
             src={product.image}
             className="w-full md:max-w-sm h-full rounded-md mx-auto shadow-lg hover:scale-105"
