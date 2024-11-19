@@ -5,6 +5,7 @@ import { AppContext } from "../context/ProductsContext";
 import PriceSort from "../Components/PriceSort";
 import CategoryFilter from "../Components/CategoryFilter";
 import FilterSlider from "../Components/FilterSlider";
+import Loading from "../Components/Loading";
 
 function Products() {
   const {
@@ -15,6 +16,8 @@ function Products() {
     clearFilters,
   } = useContext(AppContext);
   let filteredData = products;
+
+  const isLoading = filteredData.length === 0;
 
   // Apply search filter
   filteredData = products.filter((item) =>
@@ -70,7 +73,17 @@ function Products() {
 
             {/* Product grid */}
             <div className="lg:col-span-3">
-              <ProductList products={filteredData} />
+              {isLoading ? (
+                <div className="mt-20 flex justify-center">
+                  <Loading />
+                </div>
+              ) : filteredData ? (
+                <div className="min-h-[400px]">
+                  <ProductList products={filteredData} />
+                </div>
+              ) : (
+                <h2 className="text-center mt-20 text-lg">No Products</h2>
+              )}
             </div>
           </div>
         </section>

@@ -2,11 +2,14 @@ import { Link, useParams } from "react-router-dom";
 import Product from "../Components/Product";
 import { useContext } from "react";
 import { AppContext } from "../context/ProductsContext";
+import Loading from "../Components/Loading";
 
 function ProductDetails() {
   const { id } = useParams();
   const { products } = useContext(AppContext);
   const product = products.find((p) => p.id === parseInt(id));
+
+  const isLoading = products.length === 0;
 
   return (
     <div className="bg-white">
@@ -37,7 +40,11 @@ function ProductDetails() {
             </Link>
           </button>
         </div>
-        {product ? (
+        {isLoading ? (
+          <div className="mt-20 flex justify-center">
+            <Loading />
+          </div>
+        ) : product ? (
           <div className="min-h-[400px]">
             <Product product={product} />
           </div>
