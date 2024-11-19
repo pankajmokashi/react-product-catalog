@@ -13,12 +13,9 @@ function Header() {
       <header className="mx-auto max-w-screen-2xl px-4 xm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-3 sm:py-4">
           <div>
-            <h1
-              onClick={() => navigate("/")}
-              className="text-2xl sm:text-4xl font-bold cursor-pointer"
-            >
-              CATALOG
-            </h1>
+            <a href="/" className="text-2xl sm:text-4xl font-bold">
+              <h1>CATALOG</h1>
+            </a>
           </div>
 
           <div>
