@@ -77,7 +77,7 @@ function Products() {
                 <div className="mt-20 flex justify-center">
                   <Loading />
                 </div>
-              ) : filteredData ? (
+              ) : filteredData.length > 0 ? (
                 <div className="min-h-[400px]">
                   <ProductList products={filteredData} />
                 </div>
