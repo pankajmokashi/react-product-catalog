@@ -26,13 +26,13 @@ function CategoryFilter() {
       <h3 className="-mx-2 -my-3 flow-root">
         <button
           type="button"
+          onClick={() => setOpen((prev) => !prev)}
           className="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500"
         >
           <span className="font-medium text-gray-900">Category</span>
           <span className="ml-6 flex items-center">
             {!open && (
               <svg
-                onClick={() => setOpen(true)}
                 className="size-5"
                 viewBox="0 0 20 20"
                 fill="currentColor"
@@ -43,7 +43,6 @@ function CategoryFilter() {
             )}
             {open && (
               <svg
-                onClick={() => setOpen(false)}
                 className="size-5"
                 viewBox="0 0 20 20"
                 fill="currentColor"
