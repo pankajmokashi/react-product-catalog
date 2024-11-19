@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function ProductList({ products }) {
   const navigate = useNavigate();
@@ -8,7 +8,7 @@ function ProductList({ products }) {
     <div className="mx-auto px-4 sm:px-6 lg:px-8">
       <div className="mt-2 sm:mt-6 grid grid-cols-1 gap-x-6 gap-y-12 xm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 xl:gap-x-8">
         {products.map((product) => (
-          <a href={`/product/${product.id}`} key={product.id}>
+          <Link to={`/product/${product.id}`} key={product.id}>
             <div className="group relative">
               <img
                 loading="lazy"
@@ -29,7 +29,7 @@ function ProductList({ products }) {
                 </button>
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </div>

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AppContext } from "../context/ProductsContext";
 
 function Header() {
@@ -13,9 +13,9 @@ function Header() {
       <header className="mx-auto max-w-screen-2xl px-4 xm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-3 sm:py-4">
           <div>
-            <a href="/" className="text-2xl sm:text-4xl font-bold">
+            <Link to="/" className="text-2xl sm:text-4xl font-bold">
               <h1>CATALOG</h1>
-            </a>
+            </Link>
           </div>
 
           <div>
