@@ -32,6 +32,23 @@ const AppProvider = ({ children }) => {
       });
   }, []);
 
+  // Initialize cart from localStorage on page load
+  useEffect(() => {
+    const savedCart = JSON.parse(localStorage.getItem("cartData"));
+    if (savedCart) {
+      setCartData(savedCart);
+    }
+  }, []);
+
+  // Save cartData to localStorage when it changes
+  useEffect(() => {
+    if (cartData.length > 0) {
+      localStorage.setItem("cartData", JSON.stringify(cartData));
+    } else {
+      localStorage.removeItem("cartData");
+    }
+  }, [cartData]);
+
   // clear filter states
   function clearFilters() {
     setSearchValue("");
