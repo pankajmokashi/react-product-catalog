@@ -7,16 +7,16 @@ function Product({ product }) {
 
   return (
     <div className="flex flex-col items-center mx-auto">
-      <div>
+      <div className="px-4">
         <div className="mb-6">
           <h2 className="text-xl xm:text-2xl sm:text-3xl font-bold mb-2">
             {product.name}
           </h2>
-          <span className="px-6 pt-1 pb-2 bg-gray-200 rounded-lg text-sm font-medium text-slate-700">
+          <span className="px-6 py-2 bg-gray-200 rounded-lg text-sm font-medium text-slate-700">
             {product.category}
           </span>
         </div>
-        <div className="w-full xm:max-w-md md:max-w-full p-4 flex flex-col justify-center md:flex-row gap-8">
+        <div className="w-full xm:max-w-md md:max-w-full p-4 flex flex-col justify-center md:flex-row gap-4 md:gap-8">
           <div className="mx-auto max-w-[300px] h-full overflow-hidden rounded-md">
             <img
               loading="lazy"
