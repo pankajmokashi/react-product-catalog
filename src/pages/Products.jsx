@@ -39,7 +39,7 @@ function Products() {
   }
 
   return (
-    <div className="bg-white">
+    <div className="bg-gray-100">
       <main className="mx-auto max-w-screen-2xl px-4 xm:px-6 lg:px-8">
         <div className="flex justify-between border-b border-gray-200 pb-6 pt-12">
           <h1 className="text-3xl font-bold tracking-tight text-gray-900">
