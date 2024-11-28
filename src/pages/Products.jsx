@@ -37,21 +37,28 @@ function Products() {
     <div className="bg-gray-100">
       <main className="mx-auto max-w-screen-2xl px-4 xm:px-6 lg:px-8">
         <div className="border-b border-gray-200 pb-6 pt-12">
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900 pb-2">
-            Products
-          </h1>
-          <div className="flex justify-between">
-            <div>
+          <div className="flex items-center justify-between pb-4">
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900">
+              Products
+            </h1>
+            <div className="hidden md:flex max-w-72 items-center gap-2">
+              <Searchbar />
+            </div>
+            <div className="md:hidden">
+              <FilterSlider />
+            </div>
+          </div>
+          <div className="flex items-center justify-end md:justify-between">
+            <div className="hidden md:block">
               <CategorySelect />
             </div>
             <div className="flex items-center">
-              <div className="mr-2">
+              <div className="hidden md:block mr-2">
                 <PriceSelect />
               </div>
-              <div className="hidden lg:flex min-w-72 gap-2 justify-between">
+              <div className="flex md:hidden w-full items-center gap-2">
                 <Searchbar />
               </div>
-              <FilterSlider />
             </div>
           </div>
         </div>
