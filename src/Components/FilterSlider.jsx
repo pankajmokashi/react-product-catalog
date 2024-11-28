@@ -1,12 +1,9 @@
-import { useContext, useEffect, useState } from "react";
-import CategoryFilter from "./CategoryFilter";
-import PriceSort from "./PriceSort";
-import Searchbar from "./Searchbar";
-import { AppContext } from "../context/ProductsContext";
+import { useEffect, useState } from "react";
+import CategorySelect from "./CategorySelect";
+import PriceSelect from "./PriceSelect";
 
 function FilterSlider() {
   const [open, setOpen] = useState(false);
-  const { clearFilters } = useContext(AppContext);
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,7 +23,7 @@ function FilterSlider() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="px-2 pt-2 text-gray-400 hover:text-gray-500 lg:hidden"
+        className="ml-2 px-3 py-2 rounded-md bg-black text-white"
       >
         <span className="sr-only">Filters</span>
         <svg
@@ -35,7 +32,7 @@ function FilterSlider() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="w-7 h-7"
+          className="w-6 h-6"
         >
           <path
             strokeLinecap="round"
@@ -88,20 +85,17 @@ function FilterSlider() {
                       </div>
 
                       <div className="relative mt-6 flex-1 px-4 sm:px-6">
-                        <div className="mt-6 mb-4">
-                          <div className="flex gap-2 justify-between flex-col xm:flex-row">
-                            <Searchbar />
-                          </div>
+                        <div className="mb-6">
+                          <h4 className="mb-3 text-xl font-semibold">
+                            Categories
+                          </h4>
+                          <CategorySelect />
                         </div>
-                        <CategoryFilter />
-                        <PriceSort />
-                        <div className="text-gray-600 p-4 lg:border-0">
-                          <span
-                            onClick={clearFilters}
-                            className="cursor-pointer"
-                          >
-                            clear
-                          </span>
+                        <div>
+                          <h4 className="mb-3 text-xl font-semibold">
+                            Price Sort
+                          </h4>
+                          <PriceSelect />
                         </div>
                       </div>
                     </div>
