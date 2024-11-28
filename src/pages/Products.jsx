@@ -5,6 +5,7 @@ import { AppContext } from "../context/ProductsContext";
 import FilterSlider from "../Components/FilterSlider";
 import Loading from "../Components/Loading";
 import PriceSelect from "../Components/PriceSelect";
+import CategorySelect from "../Components/CategorySelect";
 
 function Products() {
   const { products, searchValue, sortByPrice, selectedCategories } =
@@ -40,7 +41,9 @@ function Products() {
             Products
           </h1>
           <div className="flex justify-between">
-            <div></div>
+            <div>
+              <CategorySelect />
+            </div>
             <div className="flex items-center">
               <div className="mr-2">
                 <PriceSelect />
