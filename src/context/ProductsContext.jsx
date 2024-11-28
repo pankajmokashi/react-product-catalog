@@ -9,7 +9,7 @@ const AppContext = createContext();
 const AppProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const [sortByPrice, setSortByPrice] = useState("");
+  const [sortByPrice, setSortByPrice] = useState("Sort");
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [cartData, setCartData] = useState([]);
   const navigate = useNavigate();

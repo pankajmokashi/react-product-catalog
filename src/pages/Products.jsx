@@ -4,14 +4,11 @@ import Searchbar from "../Components/Searchbar";
 import { AppContext } from "../context/ProductsContext";
 import FilterSlider from "../Components/FilterSlider";
 import Loading from "../Components/Loading";
+import PriceSelect from "../Components/PriceSelect";
 
 function Products() {
-  const {
-    products,
-    searchValue,
-    sortByPrice,
-    selectedCategories,
-  } = useContext(AppContext);
+  const { products, searchValue, sortByPrice, selectedCategories } =
+    useContext(AppContext);
   let filteredData = products;
 
   const isLoading = filteredData.length === 0;
@@ -22,9 +19,9 @@ function Products() {
   );
 
   // Apply sorting (if any)
-  if (sortByPrice) {
+  if (sortByPrice != "Sort") {
     filteredData = filteredData.sort((a, b) =>
-      sortByPrice === "Low To high" ? a.price - b.price : b.price - a.price
+      sortByPrice === "Low To High" ? a.price - b.price : b.price - a.price
     );
   }
 
@@ -38,15 +35,21 @@ function Products() {
   return (
     <div className="bg-gray-100">
       <main className="mx-auto max-w-screen-2xl px-4 xm:px-6 lg:px-8">
-        <div className="flex justify-between border-b border-gray-200 pb-6 pt-12">
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900">
+        <div className="border-b border-gray-200 pb-6 pt-12">
+          <h1 className="text-3xl font-bold tracking-tight text-gray-900 pb-2">
             Products
           </h1>
-          <div className="flex items-center">
-            <div className="hidden lg:flex min-w-72 gap-2 justify-between">
-              <Searchbar />
+          <div className="flex justify-between">
+            <div></div>
+            <div className="flex items-center">
+              <div className="mr-2">
+                <PriceSelect />
+              </div>
+              <div className="hidden lg:flex min-w-72 gap-2 justify-between">
+                <Searchbar />
+              </div>
+              <FilterSlider />
             </div>
-            <FilterSlider />
           </div>
         </div>
 
