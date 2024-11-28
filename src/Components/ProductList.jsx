@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function ProductList({ products }) {
-  const navigate = useNavigate();
 
   return (
     <div className="mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,10 +20,7 @@ function ProductList({ products }) {
                 <p className="font-medium text-gray-900">$ {product.price}</p>
               </div>
               <div className="mt-3">
-                <button
-                  onClick={() => navigate(`/product/${product.id}`)}
-                  className="w-full py-2 text-sm bg-black text-white rounded-lg group-hover:opacity-75"
-                >
+                <button className="w-full py-2 text-sm bg-black text-white rounded-lg group-hover:opacity-75">
                   View Details
                 </button>
               </div>
