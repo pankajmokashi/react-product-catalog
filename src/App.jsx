@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import { AppProvider } from "./context/ProductsContext";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
+import "./App.css";
 
 export default function App() {
   return (
