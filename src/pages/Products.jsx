@@ -2,8 +2,6 @@ import { useContext } from "react";
 import ProductList from "../Components/ProductList";
 import Searchbar from "../Components/Searchbar";
 import { AppContext } from "../context/ProductsContext";
-import PriceSort from "../Components/PriceSort";
-import CategoryFilter from "../Components/CategoryFilter";
 import FilterSlider from "../Components/FilterSlider";
 import Loading from "../Components/Loading";
 
@@ -13,7 +11,6 @@ function Products() {
     searchValue,
     sortByPrice,
     selectedCategories,
-    clearFilters,
   } = useContext(AppContext);
   let filteredData = products;
 
@@ -58,33 +55,19 @@ function Products() {
             Products
           </h2>
 
-          <div className="grid grid-cols-1 gap-x-4 gap-y-10 lg:grid-cols-4">
-            {/* Filters */}
-            <div className="hidden lg:block">
-              <CategoryFilter />
-              <div className="border-t"></div>
-              <PriceSort />
-              <div className="text-gray-600 p-4 lg:border-0">
-                <span onClick={clearFilters} className="cursor-pointer">
-                  clear
-                </span>
+          {/* Product grid */}
+          <div className="">
+            {isLoading ? (
+              <div className="mt-20 flex justify-center">
+                <Loading />
               </div>
-            </div>
-
-            {/* Product grid */}
-            <div className="lg:col-span-3">
-              {isLoading ? (
-                <div className="mt-20 flex justify-center">
-                  <Loading />
-                </div>
-              ) : filteredData.length > 0 ? (
-                <div className="min-h-[400px]">
-                  <ProductList products={filteredData} />
-                </div>
-              ) : (
-                <h2 className="text-center mt-20 text-lg">No Products</h2>
-              )}
-            </div>
+            ) : filteredData.length > 0 ? (
+              <div className="min-h-[400px]">
+                <ProductList products={filteredData} />
+              </div>
+            ) : (
+              <h2 className="text-center mt-20 text-lg">No Products</h2>
+            )}
           </div>
         </section>
       </main>
